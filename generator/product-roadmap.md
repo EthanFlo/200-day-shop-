@@ -12,14 +12,16 @@ When weekly cron fires, I pick the next unbuilt pack from this list, generate th
   - Buyer: senior engineers using Claude Code
   - Price: $29 ($17 launch)
   - Status: ready to upload
+  - *Built: 2026-04-17*
+
+- **Pack 02 — 40 Cursor IDE Power-User Prompts**
+  - Buyer: Cursor users (huge overlap with Claude Code but distinct community)
+  - Contents: 40 prompts organized by Cursor mode — Composer, Chat, Inline, .cursorrules, session flow
+  - Price: $29 ($17 launch)
+  - Status: ready to upload (built ahead of weekly trigger)
+  - *Built: 2026-04-17*
 
 ## Queue (priority order)
-
-### Pack 02 — Cursor IDE Power Pack
-- Buyer: Cursor users (huge overlap with Claude Code but distinct community)
-- Contents: 40 prompts specific to Cursor's agent mode, tab completion, and composer
-- Price: $29
-- Why priority: riding Cursor's growth wave, near-zero additional research required
 
 ### Pack 03 — AI Agent Testing Playbook
 - Buyer: engineers building with Claude/GPT APIs who need eval + testing discipline

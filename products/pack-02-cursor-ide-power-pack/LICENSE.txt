@@ -1,0 +1,29 @@
+LICENSE — 40 Cursor IDE Power-User Prompts
+
+Copyright (c) 2026 Ethan Florendo. All rights reserved.
+
+GRANT: The purchaser is granted a non-exclusive, non-transferable license to
+use the prompts in this pack for personal and internal commercial use — that
+includes using them on client engagements and within the purchaser's employer.
+
+YOU MAY:
+- Use the prompts in any project you work on (personal, employer, freelance).
+- Modify the prompts for your workflow.
+- Paste the .cursorrules snippets into your own projects.
+- Quote individual prompts in talks, blog posts, or tutorials with attribution
+  ("from Cursor IDE Power-User Prompts by Ethan Florendo") and a link to the
+  Gumroad page.
+
+YOU MAY NOT:
+- Resell, sublicense, or redistribute the pack or a substantial portion of it.
+- Republish on another platform (Gumroad, LemonSqueezy, GitHub repo, Notion
+  template marketplace, etc).
+- Bundle the prompts into a competing product.
+- Train a model on the pack for the purpose of generating similar prompts
+  as a product.
+
+Teammates who want access should buy their own copy. Team licenses available
+on request — email via the Gumroad receipt.
+
+NO WARRANTY: Prompts are provided as-is. I refine them based on feedback, but
+make no guarantee of fitness for a particular purpose.
