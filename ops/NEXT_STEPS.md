@@ -1,0 +1,50 @@
+# Next Steps
+
+Scheduled pipeline is live. Here's what's automated, what's queued, and what you need to do.
+
+## Automation status
+
+- **Repo:** https://github.com/EthanFlo/200-day-shop-
+- **Scheduled trigger:** `trig_01DxkHsnEsEUJHni8Eg3PePw`
+- **Dashboard:** https://claude.ai/code/scheduled/trig_01DxkHsnEsEUJHni8Eg3PePw
+- **Runs:** every Monday at 8:00 AM PDT (15:00 UTC). First run: **Monday 2026-04-20**.
+- **What it does each run:** ships the next pack from the roadmap (product files + Gumroad listing + launch content), generates drip content for all shipped packs, updates the roadmap, writes a weekly brief, and pushes a commit.
+
+After each Monday run, you run `git pull` in this directory to get the week's output.
+
+## This week (before first Monday run)
+
+**Priority: launch pack-01 so the pipeline has a live product to drip-market while pack-02 builds.**
+
+1. Complete `ops/setup-checklist.md` (Gumroad account, social accounts, payouts). ~1–2 hours. One-time.
+2. Upload `products/pack-01-claude-code-prompts/` to Gumroad using copy from `marketing/pack-01-gumroad-listing.md`. ~15 min.
+3. On launch day (pick Tue or Wed), post launch content from `marketing/pack-01-launch-content.md` across X, Reddit, LinkedIn, Threads. ~30 min.
+
+## Weekly rhythm (after first Monday run)
+
+Monday: `git pull`, read `ops/weekly-briefs/{YYYY-WW}.md`, upload the week's new pack, queue the week's posts in your scheduler.
+Tue–Fri: ~5 min/day replying to comments and DMs.
+Sat: check Gumroad dashboard, jot numbers into `ops/status.md`.
+Sun: off.
+
+## If the first Monday run fails
+
+Most common failure: the remote agent doesn't have permission to push back to your private repo. Symptom: you'll see no new commits Monday morning.
+
+Fix:
+1. Go to https://github.com/settings/installations
+2. Confirm Claude / Anthropic GitHub App has access to `EthanFlo/200-day-shop-` with write permissions.
+3. If not installed: install it, grant access to this repo.
+4. Next Monday's run will work.
+
+You can also manually trigger a test run from the dashboard to verify before waiting a week.
+
+## Cost
+
+Each weekly run uses Sonnet and costs Anthropic compute — billed against your account. Expected: ~$1–3/run depending on how much drip content accumulates. At $200/day target, trivially worth it.
+
+## Killing it
+
+If you want to stop the schedule:
+- Disable: dashboard link above → Disable toggle
+- Delete: https://claude.ai/code/scheduled (Anthropic doesn't expose delete via API yet)
