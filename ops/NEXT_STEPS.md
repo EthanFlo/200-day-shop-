@@ -1,16 +1,32 @@
 # Next Steps
 
-Scheduled pipeline is live. Here's what's automated, what's queued, and what you need to do.
-
 ## Automation status
 
-- **Repo:** https://github.com/EthanFlo/200-day-shop-
-- **Scheduled trigger:** `trig_01DxkHsnEsEUJHni8Eg3PePw`
-- **Dashboard:** https://claude.ai/code/scheduled/trig_01DxkHsnEsEUJHni8Eg3PePw
-- **Runs:** every Monday at 8:00 AM PDT (15:00 UTC). First run: **Monday 2026-04-20**.
-- **What it does each run:** ships the next pack from the roadmap (product files + Gumroad listing + launch content), generates drip content for all shipped packs, updates the roadmap, writes a weekly brief, and pushes a commit.
+**Repo:** https://github.com/EthanFlo/200-day-shop-
 
-After each Monday run, you run `git pull` in this directory to get the week's output.
+**Trigger 1 — Weekly product pipeline**
+- ID: `trig_01DxkHsnEsEUJHni8Eg3PePw`
+- Dashboard: https://claude.ai/code/scheduled/trig_01DxkHsnEsEUJHni8Eg3PePw
+- Runs: every Monday at 8:00 AM PDT (15:00 UTC). First run: **Monday 2026-04-20**.
+- What it does: ships next pack from roadmap (product + listing + launch content), generates drip for shipped packs, updates roadmap, writes weekly brief, commits + pushes.
+
+**Trigger 2 — Daily social digest**
+- ID: `trig_01Xay9csDfDZBaBqRZkx6Cm6`
+- Dashboard: https://claude.ai/code/scheduled/trig_01Xay9csDfDZBaBqRZkx6Cm6
+- Runs: Tue–Fri at 7:00 AM PDT (14:00 UTC). First run: **Tuesday 2026-04-21**.
+- What it does: drafts that day's X/Threads/LinkedIn/Reddit posts for shipped packs; commits to `ops/daily-digests/YYYY-MM-DD.md`. You open that file each morning, copy posts, queue in your scheduler.
+
+After each run, `git pull` to get the output.
+
+## 🚨 Required: 2-click GitHub auth fix
+
+The triggers failed first-run authorization (expected — fresh repo). Fix:
+
+1. Go to: **https://github.com/apps/claude** (or https://github.com/settings/installations if already installed)
+2. Install (or configure) → select **Only select repositories** → pick `EthanFlo/200-day-shop-` → grant **read + write**.
+3. Done. Both triggers will work on their next scheduled fire.
+
+To test before waiting, hit "Run now" on either dashboard link above.
 
 ## This week (before first Monday run)
 
